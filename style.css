@@ -1,4 +1,7 @@
 body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     margin: 0;
     background-color: #b5bec9;
     font-family: 'Roboto', sans-serif;
@@ -64,4 +67,8 @@ button:active {
 input[type=range] {
     width: 250px;
     margin: 16px;
+}
+
+footer {
+    margin: auto;
 }
