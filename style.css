@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    background-color: #ededed;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -11,4 +12,28 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 128px;
+}
+
+input[type=color] {
+    border: 0;
+    background: none;
+    height: 200%;
+    width: 200%;
+    cursor: pointer;
+    transform: translate(-25%, -25%);
+}
+
+.color-div {
+    border-radius: 50px;
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
 }
