@@ -1,13 +1,20 @@
 let sketchContainer = document.querySelector(".sketch-div");
-const pixelBtn = document.querySelector(".pixel-button");
+const btn = document.querySelectorAll("button");
+
 const pixel = document.createElement("div");
 const sketch = document.querySelector(".sketch-div");
+const pixelBtn = document.querySelectorAll(".pixel-button");
 
-function howManyPixels(pixels) {
-    pixels = pixelBtn;
-    sketchContainer = pixels * pixels;
-    return sketchContainer;
-}
+const px16 = document.querySelector("#px16");
+const px32 = document.querySelector("#px32");
+const px64 = document.querySelector("#px64");
+const px128 = document.querySelector("#px128");
 
-pixel.classList.add("test");
-sketch.appendChild(pixel);
+pixelBtn.forEach(button => {
+    button.addEventListener("click", () => {
+        pixel.classList.add("pixel");
+        sketch.appendChild(pixel); 
+    });
+});
+
+
