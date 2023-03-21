@@ -1,10 +1,13 @@
 let sketchContainer = document.querySelector(".sketch-div");
-const sketchPixels = document.querySelector(".pixel-button");
+const pixelBtn = document.querySelector(".pixel-button");
+const pixel = document.createElement("div");
+const sketch = document.querySelector(".sketch-div");
 
 function howManyPixels(pixels) {
-    pixels = sketchPixels;
+    pixels = pixelBtn;
     sketchContainer = pixels * pixels;
     return sketchContainer;
 }
 
-console.log(howManyPixels());
+pixel.classList.add("test");
+sketch.appendChild(pixel);
