@@ -23,7 +23,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 512px;
+    gap: 256px;
 }
 
 input[type=color] {
@@ -85,4 +85,17 @@ button:active {
 
 footer {
     margin: auto;
+}
+
+.sketch-div {
+    display: flex;
+    border: 1px solid black;
+    height: 384px;
+    width: 384px;
+}
+
+.pixel {
+    background-color: white;
+    height: 20px;
+    width: 20px;
 }
