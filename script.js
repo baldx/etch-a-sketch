@@ -11,6 +11,8 @@ const px64 = document.querySelectorAll("#px64");
 const px128 = document.querySelectorAll("#px128");
 
 
+
+
 px16.forEach(button => {
     button.addEventListener("click", () => {
         if (button.onclick = px16) {
@@ -21,7 +23,7 @@ px16.forEach(button => {
 
 px32.forEach(button => {
     button.addEventListener("click", () => {
-        if (button.onclick = px16) {
+        if (button.onclick = px32) {
             console.log("32");
         }
     });
@@ -29,7 +31,7 @@ px32.forEach(button => {
 
 px64.forEach(button => {
     button.addEventListener("click", () => {
-        if (button.onclick = px16) {
+        if (button.onclick = px64) {
             console.log("64");
         }
     });
@@ -37,7 +39,7 @@ px64.forEach(button => {
 
 px128.forEach(button => {
     button.addEventListener("click", () => {
-        if (button.onclick = px16) {
+        if (button.onclick = px128) {
             console.log("128");
         }
     });
