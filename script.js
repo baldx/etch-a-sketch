@@ -5,16 +5,40 @@ const pixel = document.createElement("div");
 const sketch = document.querySelector(".sketch-div");
 const pixelBtn = document.querySelectorAll(".pixel-button");
 
-const px16 = document.querySelector("#px16");
-const px32 = document.querySelector("#px32");
-const px64 = document.querySelector("#px64");
-const px128 = document.querySelector("#px128");
+const px16 = document.querySelectorAll("#px16");
+const px32 = document.querySelectorAll("#px32");
+const px64 = document.querySelectorAll("#px64");
+const px128 = document.querySelectorAll("#px128");
 
-pixelBtn.forEach(button => {
+
+px16.forEach(button => {
     button.addEventListener("click", () => {
-        pixel.classList.add("pixel");
-        sketch.appendChild(pixel); 
+        if (button.onclick = px16) {
+            console.log("16");
+        }
     });
 });
 
+px32.forEach(button => {
+    button.addEventListener("click", () => {
+        if (button.onclick = px16) {
+            console.log("32");
+        }
+    });
+});
 
+px64.forEach(button => {
+    button.addEventListener("click", () => {
+        if (button.onclick = px16) {
+            console.log("64");
+        }
+    });
+});
+
+px128.forEach(button => {
+    button.addEventListener("click", () => {
+        if (button.onclick = px16) {
+            console.log("128");
+        }
+    });
+});
