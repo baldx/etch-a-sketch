@@ -97,8 +97,6 @@ footer {
     width: 384px;
 }
 
-.pixel-16 {
-    background-color: white;
-    height: 24px;
-    width: 24px;
+.pixel {
+    user-select: none;
 }
