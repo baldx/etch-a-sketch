@@ -89,12 +89,11 @@ footer {
     margin: auto;
 }
 
-.sketch-container {
+.grid {
     display: grid;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border: 1px solid black;
-    height: 384px;
-    width: 384px;
+    height: 500px;
+    width: 500px;
 }
 
 .pixel {
