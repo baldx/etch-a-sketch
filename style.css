@@ -73,6 +73,8 @@ button:active {
     gap: 3px;
 }
 
+
+
 .pixel-button {
     background-color: #c7dbe6;
     border: 1px solid #071108;
@@ -87,15 +89,16 @@ footer {
     margin: auto;
 }
 
-.sketch-div {
-    display: flex;
+.sketch-container {
+    display: grid;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border: 1px solid black;
     height: 384px;
     width: 384px;
 }
 
-.pixel {
+.pixel-16 {
     background-color: white;
-    height: 20px;
-    width: 20px;
+    height: 24px;
+    width: 24px;
 }
