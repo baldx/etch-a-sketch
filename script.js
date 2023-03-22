@@ -18,7 +18,6 @@ function setCurrentSize(newSize) {
     currentSize = newSize;
 }
 
-let sketchContainer = document.querySelector(".sketch-div");
 const btn = document.querySelectorAll("button");
 
 const colorPicker = document.querySelector(".color");
@@ -32,7 +31,7 @@ const px64 = document.querySelectorAll("#px64");
 const px128 = document.querySelectorAll("#px128");
 
 const pixel = document.createElement("div");
-const sketch = document.querySelector(".sketch-container");
+const grid = document.querySelector(".grid");
 
 const pixelBtn = document.querySelectorAll(".pixel-button");
 
@@ -41,7 +40,8 @@ colorBtn.onclick = () => setCurrentMode("color");
 rainbowBtn.onclick = () => setCurrentMode("rainbow");
 eraserBtn.onclick = () => setCurrentColor("eraser");
 clearBtn.onclick = () => reloadGrid();
-px16.onclick = (e) => updateSizeValue(e.target.value);
+pixelBtn.onclick = (e) => updateSizeValue(e.target.value);
+
 
 let mouseDown = false;
 document.body.onmousedown = () => (mouseDown = true);
@@ -67,15 +67,15 @@ function clearGrid() {
 }
 
 function setupGrid(size) {
-    sketchContainer.style.gridTemplateColumns = `repeat(${size}, 1fr)`
-    sketchContainer.style.gridTemplateRows = `repeat(${size}, 1fr)`
+    grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`
+    grid.style.gridTemplateRows = `repeat(${size}, 1fr)`
 
     for (let i = 0; i < size * size; i++) {
         const gridElement = document.createElement("div");
         gridElement.classList.add("pixel");
         gridElement.addEventListener("mouseover", changeColor);
         gridElement.addEventListener("mousedown", changeColor);
-        sketchContainer.appendChild(gridElement);
+        grid.appendChild(gridElement);
 
     }
 }
