@@ -96,6 +96,27 @@ function changeColor(e) {
     }
 }
 
+function activateButton(newMode) {
+    if (currentMode === 'rainbow') {
+      rainbowBtn.classList.remove('active')
+    } else if (currentMode === 'color') {
+      colorBtn.classList.remove('active')
+    } else if (currentMode === 'eraser') {
+      eraserBtn.classList.remove('active')
+    }
+  
+    if (newMode === 'rainbow') {
+      rainbowBtn.classList.add('active')
+    } else if (newMode === 'color') {
+      colorBtn.classList.add('active')
+    } else if (newMode === 'eraser') {
+      eraserBtn.classList.add('active')
+    }
+  }
+
+window.onload = () => {
+    setupGrid(default_size);
+}
 /*
 px16.forEach(button => {
     button.addEventListener("click", () => {
