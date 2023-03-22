@@ -43,9 +43,15 @@ eraserBtn.onclick = () => setCurrentColor("eraser");
 clearBtn.onclick = () => reloadGrid();
 px16.onclick = (e) => updateSizeValue(e.target.value);
 
+let mouseDown = false;
+document.body.onmousedown = () => (mouseDown = true);
+document.body.onmouseup = () => (mouseDown = false);
 
-
-
+function changeSize(value) {
+    setCurrentSize(value);
+    updateSizeValue(value);
+    reloadGrid();
+}
 
 
 
