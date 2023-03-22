@@ -53,6 +53,10 @@ function changeSize(value) {
     reloadGrid();
 }
 
+function updateSizeValue(value) {
+    updateSizeValue.innerHTML = `${value} x ${value}`;
+}
+
 
 
 /*
