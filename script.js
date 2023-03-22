@@ -32,7 +32,7 @@ const px64 = document.querySelectorAll("#px64");
 const px128 = document.querySelectorAll("#px128");
 
 const pixel = document.createElement("div");
-const sketch = document.querySelector(".sketch-div");
+const sketch = document.querySelector(".sketch-container");
 
 const pixelBtn = document.querySelectorAll(".pixel-button");
 
@@ -64,6 +64,20 @@ function reloadGrid() {
 
 function clearGrid() {
     clearGrid.innerHTML = " ";
+}
+
+function setupGrid(size) {
+    sketchContainer.style.gridTemplateColumns = `repeat(${size}, 1fr)`
+    sketchContainer.style.gridTemplateRows = `repeat(${size}, 1fr)`
+
+    for (let i = 0; i < size * size; i++) {
+        const gridElement = document.createElement("div");
+        gridElement.classList.add("pixel");
+        gridElement.addEventListener("mouseover", changeColor);
+        gridElement.addEventListener("mousedown", changeColor);
+        sketchContainer.appendChild(gridElement);
+
+    }
 }
 
 function changeColor(e) {
