@@ -57,7 +57,30 @@ function updateSizeValue(value) {
     updateSizeValue.innerHTML = `${value} x ${value}`;
 }
 
+function reloadGrid() {
+    clearGrid();
+    setupGrid(currentSize);
+}
 
+function clearGrid() {
+    clearGrid.innerHTML = " ";
+}
+
+function changeColor(e) {
+    if (e.type === "mouseover" && !mouseDown) return;
+    if (currentMode === "rainbow") {
+        const RandomR = Math.floor(Math.random() * 256);
+        const RandomG = Math.floor(Math.random() * 256);
+        const RandomB = Math.floor(Math.random() * 256);
+        e.target.style.backgroundColor = `rgb(${RandomR}, ${RandomG}, ${RandomB})`;
+    }
+    else if (currentColor === "color") {
+        e.target.style.backgroundColor = currentColor;
+    }
+    else if (currentMode === "eraser") {
+        e.target.style.backgroundColor = "#fefefe";
+    }
+}
 
 /*
 px16.forEach(button => {
